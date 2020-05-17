@@ -1,0 +1,1 @@
+Petit script en bash pour la recursivité, même si en l'état il n'a pas de réelle utilitée.
