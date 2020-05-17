@@ -1,12 +1,14 @@
+#!/bin/bash
+
 recursive_list() {
     cd "$1"
     for dir in */;
     do
-        size=$(ls -d */ 2>/dev/null | wc -l)
+        size=$(/bin/ls -d */ 2>/dev/null | wc -l)
         if [ $size -eq 0 ]; then
-            ls -al
+            /bin/ls -al
         else  
-            ls -al
+            /bin/ls -al
             echo $dir
             recursive_list "$dir"
     
@@ -15,4 +17,4 @@ recursive_list() {
     cd ..
 }
 
-recur_list $1
+recursive_list $1
